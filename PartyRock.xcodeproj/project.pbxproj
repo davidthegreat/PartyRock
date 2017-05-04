@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D00DFF171EBACA6400AB7760 /* still time.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D00DFF161EBACA6400AB7760 /* still time.ttf */; };
 		D016E9411EB969CA00D1186E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D016E9401EB969CA00D1186E /* AppDelegate.swift */; };
 		D016E9431EB969CA00D1186E /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D016E9421EB969CA00D1186E /* MainVC.swift */; };
 		D016E9461EB969CA00D1186E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D016E9441EB969CA00D1186E /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D00DFF161EBACA6400AB7760 /* still time.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "still time.ttf"; sourceTree = "<group>"; };
 		D016E93D1EB969CA00D1186E /* PartyRock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyRock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D016E9401EB969CA00D1186E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D016E9421EB969CA00D1186E /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -74,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D00DFF181EBACAF500AB7760 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				D00DFF161EBACA6400AB7760 /* still time.ttf */,
+			);
+			name = Files;
+			sourceTree = "<group>";
+		};
 		D016E9341EB969CA00D1186E = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +107,7 @@
 		D016E93F1EB969CA00D1186E /* PartyRock */ = {
 			isa = PBXGroup;
 			children = (
+				D00DFF181EBACAF500AB7760 /* Files */,
 				D016E9701EB9992900D1186E /* Model */,
 				D016E96F1EB9991C00D1186E /* View */,
 				D016E96E1EB996EA00D1186E /* Controller */,
@@ -258,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D016E94B1EB969CA00D1186E /* LaunchScreen.storyboard in Resources */,
+				D00DFF171EBACA6400AB7760 /* still time.ttf in Resources */,
 				D016E9481EB969CA00D1186E /* Assets.xcassets in Resources */,
 				D016E9461EB969CA00D1186E /* Main.storyboard in Resources */,
 			);
@@ -534,6 +546,7 @@
 				D016E9671EB969CA00D1186E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D016E9681EB969CA00D1186E /* Build configuration list for PBXNativeTarget "PartyRockTests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +555,7 @@
 				D016E96A1EB969CA00D1186E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D016E96B1EB969CA00D1186E /* Build configuration list for PBXNativeTarget "PartyRockUITests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +564,7 @@
 				D016E96D1EB969CA00D1186E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
