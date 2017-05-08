@@ -14,10 +14,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PartyRock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="PartyRock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -73,7 +73,7 @@
                                 <rect key="frame" x="0.0" y="134" width="320" height="346"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="85" id="S8l-mp-Y0M">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PartyCell" rowHeight="85" id="S8l-mp-Y0M" customClass="PartyCell" customModule="PartyRock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S8l-mp-Y0M" id="cMy-uC-0AK">
@@ -97,7 +97,6 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.95146665590000001" green="1" blue="0.089715357290000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="hyZ-KP-51e" firstAttribute="leading" secondItem="cMy-uC-0AK" secondAttribute="leading" constant="5" id="4F8-f7-UZP"/>
                                                 <constraint firstItem="hyZ-KP-51e" firstAttribute="leading" secondItem="cMy-uC-0AK" secondAttribute="leading" id="90j-8b-tmK"/>
@@ -110,6 +109,10 @@
                                                 <constraint firstItem="hyZ-KP-51e" firstAttribute="leading" secondItem="cMy-uC-0AK" secondAttribute="leading" constant="5" id="yul-YO-lsB"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="videoPreviewImage" destination="hyZ-KP-51e" id="4MU-Lb-wFW"/>
+                                            <outlet property="videoTitle" destination="di1-af-QDK" id="ZGM-ax-Dzs"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -129,10 +132,39 @@
                             <constraint firstItem="BRS-Xp-D8e" firstAttribute="leading" secondItem="skf-Up-Nse" secondAttribute="leading" id="ySY-TP-JdG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="jj3-6V-hBt" id="5IX-Qv-J0n"/>
+                        <segue destination="gfz-Sr-u2O" kind="showDetail" identifier="VideoVC" id="b7z-ZO-oJQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.25" y="137.5"/>
+            <point key="canvasLocation" x="118" y="49"/>
+        </scene>
+        <!--VideoVC-->
+        <scene sceneID="isA-h3-qDn">
+            <objects>
+                <viewController id="gfz-Sr-u2O" userLabel="VideoVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MJL-sx-Vt6"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aeg-xY-GY9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fe3-Op-cgM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ddS-cz-ejm">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bcs-0S-iZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1053.75" y="65"/>
         </scene>
     </scenes>
     <resources>
