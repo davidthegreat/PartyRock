@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -100,8 +101,12 @@
                                             <constraints>
                                                 <constraint firstItem="hyZ-KP-51e" firstAttribute="leading" secondItem="cMy-uC-0AK" secondAttribute="leading" constant="5" id="4F8-f7-UZP"/>
                                                 <constraint firstItem="hyZ-KP-51e" firstAttribute="leading" secondItem="cMy-uC-0AK" secondAttribute="leading" id="90j-8b-tmK"/>
+                                                <constraint firstItem="hyZ-KP-51e" firstAttribute="leading" secondItem="cMy-uC-0AK" secondAttribute="leading" constant="20" id="9Ec-QD-Ebq"/>
+                                                <constraint firstItem="hyZ-KP-51e" firstAttribute="leading" secondItem="cMy-uC-0AK" secondAttribute="leading" constant="10" id="CC4-eV-8t5"/>
                                                 <constraint firstItem="hyZ-KP-51e" firstAttribute="centerY" secondItem="cMy-uC-0AK" secondAttribute="centerY" id="H8K-8n-pR9"/>
                                                 <constraint firstAttribute="trailing" secondItem="di1-af-QDK" secondAttribute="trailing" id="Lzz-Vp-Ydh"/>
+                                                <constraint firstItem="hyZ-KP-51e" firstAttribute="leading" secondItem="cMy-uC-0AK" secondAttribute="leading" constant="10" id="OYq-rX-Sy3"/>
+                                                <constraint firstItem="hyZ-KP-51e" firstAttribute="leading" secondItem="cMy-uC-0AK" secondAttribute="leading" constant="10" id="bxs-YF-DA0"/>
                                                 <constraint firstItem="hyZ-KP-51e" firstAttribute="centerY" secondItem="cMy-uC-0AK" secondAttribute="centerY" id="gKx-um-ubE"/>
                                                 <constraint firstItem="di1-af-QDK" firstAttribute="leading" secondItem="hyZ-KP-51e" secondAttribute="trailing" constant="8" id="ivl-eJ-9QO"/>
                                                 <constraint firstItem="di1-af-QDK" firstAttribute="centerY" secondItem="cMy-uC-0AK" secondAttribute="centerY" id="jio-AO-le0"/>
@@ -153,13 +158,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ddS-cz-ejm">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ddS-cz-ejm">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDR-lj-uSo" userLabel="label">
+                                <rect key="frame" x="21" y="270" width="288" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="IG2-q4-2AI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eDR-lj-uSo" firstAttribute="top" secondItem="ddS-cz-ejm" secondAttribute="bottom" constant="50" id="7sR-wk-xPG"/>
+                            <constraint firstItem="eDR-lj-uSo" firstAttribute="leading" secondItem="Fe3-Op-cgM" secondAttribute="leadingMargin" constant="5" id="8pJ-IN-8oV"/>
+                            <constraint firstItem="ddS-cz-ejm" firstAttribute="leading" secondItem="Fe3-Op-cgM" secondAttribute="leading" id="CsI-m3-4Yw"/>
+                            <constraint firstItem="ddS-cz-ejm" firstAttribute="top" secondItem="Fe3-Op-cgM" secondAttribute="top" id="Hq8-pY-z3w"/>
+                            <constraint firstItem="eDR-lj-uSo" firstAttribute="trailing" secondItem="Fe3-Op-cgM" secondAttribute="trailingMargin" constant="5" id="Piy-kV-xw8"/>
+                            <constraint firstItem="Aeg-xY-GY9" firstAttribute="top" secondItem="eDR-lj-uSo" secondAttribute="bottom" constant="140" id="ZSP-VP-U4i"/>
+                            <constraint firstAttribute="trailing" secondItem="ddS-cz-ejm" secondAttribute="trailing" id="oqA-fm-z23"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bcs-0S-iZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
